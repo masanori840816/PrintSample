@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using PrintSample.Main;
+using PrintSample.Prints;
 
 namespace PrintSample
 {
@@ -25,7 +21,8 @@ namespace PrintSample
         {
             var services = new ServiceCollection();
             services.AddScoped<MainWindow>();
-            //services.AddScoped<MainViewModel>();
+            services.AddScoped<MainViewModel>();
+            services.AddScoped<IPrinter, Printer>();
             //services.AddScoped<ISpreadsheetLoader, SpreadsheetLoader>();
             return services.BuildServiceProvider();
         }
