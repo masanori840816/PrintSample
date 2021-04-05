@@ -20,17 +20,17 @@
         <Button x:Name="OpenFileButton" Content="Open" HorizontalAlignment="Left" Height="32" Margin="586,48,0,0" VerticalAlignment="Top" Width="80" FontSize="18"/>
         <ComboBox x:Name="PrinterSelector" HorizontalAlignment="Left" Margin="37,128,0,0" VerticalAlignment="Top" Width="629" Height="32" FontSize="18"/>
         <TextBox x:Name="LoadFileInput" HorizontalAlignment="Left" Margin="220,48,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" IsEnabled="False" Height="32" FontSize="18"/>
-        <TextBox x:Name="SizeXInput" HorizontalAlignment="Left" Height="32" Margin="37,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" FontSize="18"/>
-        <TextBox x:Name="SizeYInput" HorizontalAlignment="Left" Height="32" Margin="201,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" FontSize="18"/>
-        <ComboBox x:Name="OrientationSelector" HorizontalAlignment="Left" Margin="400,0,0,0" VerticalAlignment="Center" Width="140" Height="32" FontSize="18"/>
-        <TextBox x:Name="CopyCountInput" HorizontalAlignment="Left" Height="32" Margin="37,273,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <TextBox x:Name="SizeXInput" HorizontalAlignment="Left" Height="32" Margin="37,205,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <TextBox x:Name="SizeYInput" HorizontalAlignment="Left" Height="32" Margin="201,205,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <ComboBox x:Name="OrientationSelector" HorizontalAlignment="Left" Margin="400,205,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="18"/>
+        <TextBox x:Name="CopyCountInput" HorizontalAlignment="Left" Height="32" Margin="37,281,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
         <Button x:Name="PrintButton" Content="Print" HorizontalAlignment="Left" Height="32" Margin="688,368,0,0" VerticalAlignment="Top" Width="80" FontSize="18"/>
         <Label x:Name="FileTypeTitle" Content="File Type" HorizontalAlignment="Left" Margin="37,16,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsColumnHeader="True" Height="30" FontSize="18"/>
         <Label x:Name="FileTitle" Content="File" HorizontalAlignment="Left" Margin="219,16,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsColumnHeader="True" FontSize="18" Height="32"/>
         <Label x:Name="PrinterTitle" Content="Printer" HorizontalAlignment="Left" Margin="39,96,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsColumnHeader="True" Height="32" FontSize="18"/>
         <Label x:Name="SizeTitle" Content="Size" HorizontalAlignment="Left" Margin="39,170,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsColumnHeader="True" Height="32" FontSize="18"/>
         <Label x:Name="OrientationTitle" Content="Orientation" HorizontalAlignment="Left" Margin="402,170,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsColumnHeader="True" Height="32" FontSize="18"/>
-        <Label x:Name="CopyCountTitle" Content="Copy Count" HorizontalAlignment="Left" Margin="39,241,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsColumnHeader="True" Height="32" FontSize="18"/>
+        <Label x:Name="CopyCountTitle" Content="Copy Count" HorizontalAlignment="Left" Margin="39,245,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsColumnHeader="True" Height="32" FontSize="18"/>
 
     </Grid>
 </Window>
