@@ -17,8 +17,9 @@ namespace PrintSample.Main
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainViewModel viewModel)
         {
+            DataContext = viewModel;
             InitializeComponent();
         }
     }
