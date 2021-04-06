@@ -20,7 +20,7 @@ namespace PrintSample.Main
         public void Execute(object? parameter)
         {
             // ex. dotnet run spreadsheet "{'filePath':'sample.xlsx','sheetName':'Sheet1'}"
-            var args = Environment.GetCommandLineArgs();
+            /*var args = Environment.GetCommandLineArgs();
             if(args.Length <= 2)
             {
                 logger.Error("No arguments");
@@ -40,7 +40,7 @@ namespace PrintSample.Main
                 default:
                     logger.Error("No actions");
                     break;
-            }
+            }*/
         }
     }
 }

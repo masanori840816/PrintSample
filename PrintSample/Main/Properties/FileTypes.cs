@@ -24,6 +24,16 @@ namespace PrintSample.Main.Properties
                 OnPropertyChanged("SelectedFileType");
             }
         }
+        public string GetFilter(string key)
+        {
+            switch(key)
+            {
+                case "PDF":
+                    return "PDFファイル(*.pdf)|*.pdf";
+                default:
+                    return "";
+            }
+        }
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
