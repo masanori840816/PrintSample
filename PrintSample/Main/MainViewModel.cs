@@ -1,6 +1,9 @@
+using System;
 using NLog;
+using PrintSample.Files;
 using PrintSample.Main.Commands;
 using PrintSample.Main.Properties;
+using PrintSample.Pdf;
 
 namespace PrintSample.Main
 {
@@ -14,7 +17,8 @@ namespace PrintSample.Main
         public SelectedPrinter SelectedPrinter { get; set; }
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly FileSelector fileSelector;
-        public MainViewModel()
+        private readonly IPdfLoader pdfLoader;
+        public MainViewModel(IPdfLoader pdfLoader)
         {
             this.Open = new OpenDialogCommand();
             this.Print = new PrintCommand();
@@ -22,9 +26,20 @@ namespace PrintSample.Main
             this.SelectedFile = new SelectedFile();
             this.SelectedPrinter = new SelectedPrinter();
             this.fileSelector = new FileSelector();
-            this.Print.Action += () =>
+            this.pdfLoader = pdfLoader;
+            this.Print.Action += async () =>
             {
-                logger.Debug(this.SelectedPrinter.PrinterName);
+                try
+                {
+                    var loadedImages = await this.pdfLoader.LoadAsync(
+                        new LoadPdfFileArgs(this.SelectedFile.FilePath));
+                    logger.Debug("Result: " + loadedImages.Count);
+                }
+                catch(Exception ex)
+                {
+                    logger.Error(ex.Message);
+                }
+                
             };
             this.fileSelector.FileSelected += (filePath) =>
             {

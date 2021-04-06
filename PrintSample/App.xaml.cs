@@ -2,6 +2,7 @@
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using PrintSample.Main;
+using PrintSample.Pdf;
 using PrintSample.Prints;
 
 namespace PrintSample
@@ -23,6 +24,7 @@ namespace PrintSample
             services.AddScoped<MainWindow>();
             services.AddScoped<MainViewModel>();
             services.AddScoped<IPrinter, Printer>();
+            services.AddScoped<IPdfLoader, PdfLoader>();
             //services.AddScoped<ISpreadsheetLoader, SpreadsheetLoader>();
             return services.BuildServiceProvider();
         }
