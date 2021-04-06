@@ -11,6 +11,7 @@ namespace PrintSample.Main
         public PrintCommand Print { get; }
         public FileTypes FileTypes { get; set; }
         public SelectedFile SelectedFile { get; set; }
+        public SelectedPrinter SelectedPrinter { get; set; }
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly FileSelector fileSelector;
         public MainViewModel()
@@ -19,10 +20,11 @@ namespace PrintSample.Main
             this.Print = new PrintCommand();
             this.FileTypes = new FileTypes();
             this.SelectedFile = new SelectedFile();
+            this.SelectedPrinter = new SelectedPrinter();
             this.fileSelector = new FileSelector();
             this.Print.Action += () =>
             {
-                logger.Debug(this.SelectedFile.FilePath);
+                logger.Debug(this.SelectedPrinter.PrinterName);
             };
             this.fileSelector.FileSelected += (filePath) =>
             {

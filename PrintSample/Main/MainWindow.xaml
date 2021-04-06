@@ -23,7 +23,10 @@
         <Button x:Name="OpenFileButton" Content="Open" HorizontalAlignment="Left" Height="32" 
             Margin="586,48,0,0" VerticalAlignment="Top" Width="80" FontSize="18"
             Command="{Binding Open}"/>
-        <ComboBox x:Name="PrinterSelector" HorizontalAlignment="Left" Margin="37,128,0,0" VerticalAlignment="Top" Width="629" Height="32" FontSize="18"/>
+        <ComboBox x:Name="PrinterSelector" HorizontalAlignment="Left" Margin="37,128,0,0" 
+                VerticalAlignment="Top" Width="629" Height="32" FontSize="18"
+                ItemsSource="{Binding SelectedPrinter.PrinterNames, Mode=OneWay}"
+            SelectedItem="{Binding SelectedPrinter.PrinterName}"/>
         <TextBox x:Name="LoadFileInput" HorizontalAlignment="Left" Margin="220,48,0,0" 
                 Text="{Binding Path=SelectedFile.FilePath, UpdateSourceTrigger=PropertyChanged}"
                 TextWrapping="NoWrap" VerticalAlignment="Top" 
